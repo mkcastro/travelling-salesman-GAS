@@ -23,12 +23,12 @@ function optimalRoute(stops, startAddress, endAddress) {
     const stopsOrder = directions.routes[0].waypoint_order;
 
     // 6. Assign the stop position to each address
-    var stop_sequence = [["Stop #"]];
+    const stopSequence = [["Stop #"]];
     for (j = 0; j < stopsOrder.length; j++) {
         var stop = stopsOrder.indexOf(j) + 1;
-        stop_sequence.push([stop]);
+        stopSequence.push([stop]);
     }
 
     // 7. Return the result
-    return stop_sequence;
+    return stopSequence;
 }
