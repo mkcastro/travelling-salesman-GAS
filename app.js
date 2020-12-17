@@ -20,12 +20,12 @@ function optimalRoute(stops, startAddress, endAddress) {
 
     // 5. Compute optimal route
     const directions = directionFinder.getDirections();
-    var stops_order = directions.routes[0].waypoint_order;
+    const stopsOrder = directions.routes[0].waypoint_order;
 
     // 6. Assign the stop position to each address
     var stop_sequence = [["Stop #"]];
-    for (j = 0; j < stops_order.length; j++) {
-        var stop = stops_order.indexOf(j) + 1;
+    for (j = 0; j < stopsOrder.length; j++) {
+        var stop = stopsOrder.indexOf(j) + 1;
         stop_sequence.push([stop]);
     }
 
