@@ -19,7 +19,7 @@ function optimalRoute(stops, startAddress, endAddress) {
     }
 
     // 5. Compute optimal route
-    var directions = directionFinder.getDirections();
+    const directions = directionFinder.getDirections();
     var stops_order = directions.routes[0].waypoint_order;
 
     // 6. Assign the stop position to each address
