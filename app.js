@@ -1,26 +1,25 @@
 function optimalRoute(stops, startAddress, endAddress) {
-
     // 1. Access the Maps object
-    var df = Maps.newDirectionFinder();
+    const directionFinder = Maps.newDirectionFinder();
 
     // 2. Set the starting and ending addresses
-    df.setOrigin(String(startAddress));
-    df.setDestination(String(endAddress));
+    directionFinder.setOrigin(String(startAddress));
+    directionFinder.setDestination(String(endAddress));
 
     // 3. More settings...
-    df.setMode(Maps.DirectionFinder.Mode.DRIVING);
-    df.setOptimizeWaypoints(true);
+    directionFinder.setMode(Maps.DirectionFinder.Mode.DRIVING);
+    directionFinder.setOptimizeWaypoints(true);
 
     // 4. Adding addresses to the route
     for(var i=0; i < stops.length; i++) {
         var addr = stops[i][0];
         if(addr.length>0) {
-            df.addWaypoint(addr);
+            directionFinder.addWaypoint(addr);
         }
     }
 
     // 5. Compute optimal route
-    var directions = df.getDirections();
+    var directions = directionFinder.getDirections();
     var stops_order = directions.routes[0].waypoint_order;
 
     // 6. Assign the stop position to each address
