@@ -1,4 +1,4 @@
-function optimalRoute(stops, startAddress, endAddress) {
+function optiman_route(stops, startAddress, endAddress) {
     // 1. Access the Maps object
     const directionFinder = Maps.newDirectionFinder();
 
