@@ -12,9 +12,9 @@ function optimalRoute(stops, startAddress, endAddress) {
 
     // 4. Adding addresses to the route
     for(var i=0; i < stops.length; i++) {
-        var addr = stops[i][0];
-        if(addr.length>0) {
-            directionFinder.addWaypoint(addr);
+        let address = stops[i][0];
+        if(address.length>0) {
+            directionFinder.addWaypoint(address);
         }
     }
 
