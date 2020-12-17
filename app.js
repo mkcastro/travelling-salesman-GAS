@@ -25,7 +25,7 @@ function optimalRoute(stops, startAddress, endAddress) {
     // 6. Assign the stop position to each address
     const stopSequence = [["Stop #"]];
     for (j = 0; j < stopsOrder.length; j++) {
-        var stop = stopsOrder.indexOf(j) + 1;
+        let stop = stopsOrder.indexOf(j) + 1;
         stopSequence.push([stop]);
     }
 
