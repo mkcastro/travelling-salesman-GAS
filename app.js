@@ -25,7 +25,7 @@ function optiman_route(stops, startAddress, endAddress) {
     // 6. Assign the stop position to each address
     const stopSequence = [["Stop #"]];
     stopsOrder.forEach(stop => {
-        stopSequence.push([++stop]);
+        stopSequence.push([stop + 1]);
     });
 
     // 7. Return the result
